@@ -1,4 +1,5 @@
 {
+	"compileOnSave": true,
 	"include": [
 		"src/**/*"
 	],
@@ -6,20 +7,33 @@
 		"node_modules"
 	],
 	"compilerOptions": {
-		"outDir": "./dist",
+		"baseUrl": ".",
+		"outDir": "dist",
+		"rootDir": "src",
+		"paths": {
+			"~/*": [
+				"src/*"
+			]
+		},
+		"lib": [
+			"dom",
+			"ES5"
+		],
+		"jsx": "react",
 		"sourceMap": true,
 		"alwaysStrict": true,
 		"strictNullChecks": true,
 		"strictPropertyInitialization": true,
 		"strictFunctionTypes": true,
 		"noPropertyAccessFromIndexSignature": true,
-		"allowUnreachableCode": false,
+		"allowUnreachableCode": true,
 		"suppressExcessPropertyErrors": false,
 		"suppressImplicitAnyIndexErrors": false,
 		"noStrictGenericChecks": false,
 		"noImplicitAny": true,
 		"inlineSources": true,
 		"downlevelIteration": true,
+		"noEmitOnError": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
@@ -29,20 +43,12 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"strict": true,
-		"jsx": "react",
+		"target": "ES5",
+		"module": "ES2022",
 		"allowJs": true,
 		"checkJs": true,
-		"target": "es2015",
-		"lib": [
-			"es2017",
-			"dom"
-		],
-		"module": "ES2022",
-		"paths": {
-			"~/*": [
-				"src/*"
-			]
-		},
-		"baseUrl": "."
+		"noImplicitUseStrict": false,
+		"pretty": true,
+		"removeComments": true
 	}
 }
